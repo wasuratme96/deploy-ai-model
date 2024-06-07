@@ -1,3 +1,5 @@
+pip install transformers streamlit
+
 import streamlit as st
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 
