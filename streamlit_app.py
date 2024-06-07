@@ -1,8 +1,6 @@
 pip install transformers streamlit
 
 import streamlit as st
-from transformers import AutoImageProcessor, AutoModelForImageClassification
-
 # Load model
 processor = AutoImageProcessor.from_pretrained("ttangmo24/vit-base-classification-Eye-Diseases")
 model = AutoModelForImageClassification.from_pretrained("ttangmo24/vit-base-classification-Eye-Diseases")
