@@ -22,7 +22,7 @@ def main():
     if uploaded_file is not None:
         st.image(uploaded_file)
         with st.spinner('Classifying...'):
-            outputs = model([uploaded_file])
+            outputs = model(uploaded_file)
             # Display results
             st.write("Predicted Class:", outputs)
 
