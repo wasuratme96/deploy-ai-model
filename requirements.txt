@@ -1,5 +1,6 @@
 # Need to get the CPU version of torch packages from here:
 # These are needed because the deployed app doesn't have much room for the full version
 pandas==2.0
+streamlit==1.4.0
 transformers[torch]
 
