@@ -1,5 +1,6 @@
 
 import streamlit as st
+from PIL import Image
 from transformers import AutoModelForImageClassification, pipeline
 
 # Load model
@@ -21,8 +22,9 @@ def main():
 
     if uploaded_file is not None:
         st.image(uploaded_file)
+        image = Image.open(uploaded_file)
         with st.spinner('Classifying...'):
-            outputs = model(uploaded_file)
+            outputs = model(image)
             # Display results
             st.write("Predicted Class:", outputs)
 
