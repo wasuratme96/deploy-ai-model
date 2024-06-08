@@ -20,8 +20,9 @@ def main():
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 
     if uploaded_file is not None:
+        st.image(uploaded_file)
         # Process uploaded image
-        input_image = processor(uploaded_file)
+        input_image = processor([uploaded_file])
         
         # Perform classification
         with st.spinner('Classifying...'):
